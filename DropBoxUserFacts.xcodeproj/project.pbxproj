@@ -3,18 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E81120F36B7CD2676A7B887 /* Pods_DropBoxUserFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C706DE73E8B260910CB5F4A2 /* Pods_DropBoxUserFacts.framework */; };
+		2153903534F877814D7DF27C /* Pods_DropBoxUserFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5639F662084C356DCB6C3B85 /* Pods_DropBoxUserFactsTests.framework */; };
 		905629422567E8640079FD37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629412567E8640079FD37 /* AppDelegate.swift */; };
 		905629442567E8640079FD37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629432567E8640079FD37 /* SceneDelegate.swift */; };
-		905629462567E8640079FD37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629452567E8640079FD37 /* ViewController.swift */; };
-		905629492567E8640079FD37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905629472567E8640079FD37 /* Main.storyboard */; };
 		9056294B2567E8680079FD37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9056294A2567E8680079FD37 /* Assets.xcassets */; };
 		9056294E2567E8680079FD37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9056294C2567E8680079FD37 /* LaunchScreen.storyboard */; };
 		905629592567E8680079FD37 /* DropBoxUserFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629582567E8680079FD37 /* DropBoxUserFactsTests.swift */; };
 		905629642567E8680079FD37 /* DropBoxUserFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629632567E8680079FD37 /* DropBoxUserFactsUITests.swift */; };
+		9056297D2567F2050079FD37 /* FactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9056297C2567F2050079FD37 /* FactsListViewController.swift */; };
+		905629822567F2390079FD37 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629812567F2390079FD37 /* FactsListViewModel.swift */; };
+		905629872567F28C0079FD37 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629862567F28C0079FD37 /* CustomFlowLayout.swift */; };
+		90D4E6E02568022B00DE9AF3 /* FactsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E6DF2568022B00DE9AF3 /* FactsListCollectionViewCell.swift */; };
+		90D4E6E52568029F00DE9AF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E6E42568029F00DE9AF3 /* Constants.swift */; };
+		90D4E6EA256802D200DE9AF3 /* UIVIew+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E6E9256802D200DE9AF3 /* UIVIew+Utility.swift */; };
+		90D4E6EF2568058E00DE9AF3 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E6EE2568058E00DE9AF3 /* APIRouter.swift */; };
+		90D4E6F4256805C700DE9AF3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E6F3256805C700DE9AF3 /* APIClient.swift */; };
+		90D4E70225681A1F00DE9AF3 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E70125681A1F00DE9AF3 /* DataModel.swift */; };
+		90D4E70725681A5C00DE9AF3 /* RowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E70625681A5C00DE9AF3 /* RowsModel.swift */; };
+		E8A8FDEE4C9625CC74DC0AAF /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6ADAABB18E56C003956BD2 /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5639F662084C356DCB6C3B85 /* Pods_DropBoxUserFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		590A843918841C37ACBD6160 /* Pods-DropBoxUserFactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFactsTests.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		70459BA7783AF554EDC07D34 /* Pods-DropBoxUserFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFactsTests.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests.release.xcconfig"; sourceTree = "<group>"; };
+		7491CB5066B22917A2F05344 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9056293E2567E8640079FD37 /* DropBoxUserFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropBoxUserFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		905629412567E8640079FD37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		905629432567E8640079FD37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		905629452567E8640079FD37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		905629482567E8640079FD37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9056294A2567E8680079FD37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9056294D2567E8680079FD37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9056294F2567E8680079FD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +62,21 @@
 		9056295F2567E8680079FD37 /* DropBoxUserFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBoxUserFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		905629632567E8680079FD37 /* DropBoxUserFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxUserFactsUITests.swift; sourceTree = "<group>"; };
 		905629652567E8680079FD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9056297C2567F2050079FD37 /* FactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewController.swift; sourceTree = "<group>"; };
+		905629812567F2390079FD37 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
+		905629862567F28C0079FD37 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		90D4E6DF2568022B00DE9AF3 /* FactsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		90D4E6E42568029F00DE9AF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		90D4E6E9256802D200DE9AF3 /* UIVIew+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Utility.swift"; sourceTree = "<group>"; };
+		90D4E6EE2568058E00DE9AF3 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		90D4E6F3256805C700DE9AF3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		90D4E70125681A1F00DE9AF3 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		90D4E70625681A5C00DE9AF3 /* RowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsModel.swift; sourceTree = "<group>"; };
+		94AD1A28CC0BA1C918617EA5 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C706DE73E8B260910CB5F4A2 /* Pods_DropBoxUserFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EA914C91446F3DF51A77F1 /* Pods-DropBoxUserFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts.debug.xcconfig"; sourceTree = "<group>"; };
+		EC6ADAABB18E56C003956BD2 /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87E7FB9225D3A7DD015E953 /* Pods-DropBoxUserFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E81120F36B7CD2676A7B887 /* Pods_DropBoxUserFacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2153903534F877814D7DF27C /* Pods_DropBoxUserFactsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A8FDEE4C9625CC74DC0AAF /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EB2F410E3012188A6019BFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C706DE73E8B260910CB5F4A2 /* Pods_DropBoxUserFacts.framework */,
+				EC6ADAABB18E56C003956BD2 /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework */,
+				5639F662084C356DCB6C3B85 /* Pods_DropBoxUserFactsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		903DC17D256917CA002FD814 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				905629412567E8640079FD37 /* AppDelegate.swift */,
+				905629432567E8640079FD37 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		903DC181256917D8002FD814 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90D4E70125681A1F00DE9AF3 /* DataModel.swift */,
+				90D4E70625681A5C00DE9AF3 /* RowsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		903DC185256918EC002FD814 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9056297C2567F2050079FD37 /* FactsListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		903DC189256918FC002FD814 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				905629812567F2390079FD37 /* FactsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		903DC18A25691907002FD814 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				905629862567F28C0079FD37 /* CustomFlowLayout.swift */,
+				90D4E6DF2568022B00DE9AF3 /* FactsListCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		903DC18E25691937002FD814 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				90D4E6E42568029F00DE9AF3 /* Constants.swift */,
+				90D4E6E9256802D200DE9AF3 /* UIVIew+Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		903DC19225691944002FD814 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				90D4E6EE2568058E00DE9AF3 /* APIRouter.swift */,
+				90D4E6F3256805C700DE9AF3 /* APIClient.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		905629352567E8630079FD37 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +185,8 @@
 				905629572567E8680079FD37 /* DropBoxUserFactsTests */,
 				905629622567E8680079FD37 /* DropBoxUserFactsUITests */,
 				9056293F2567E8640079FD37 /* Products */,
+				A9732EB673EF32C40F793269 /* Pods */,
+				5EB2F410E3012188A6019BFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +203,13 @@
 		905629402567E8640079FD37 /* DropBoxUserFacts */ = {
 			isa = PBXGroup;
 			children = (
-				905629412567E8640079FD37 /* AppDelegate.swift */,
-				905629432567E8640079FD37 /* SceneDelegate.swift */,
-				905629452567E8640079FD37 /* ViewController.swift */,
-				905629472567E8640079FD37 /* Main.storyboard */,
+				903DC17D256917CA002FD814 /* AppDelegate */,
+				903DC181256917D8002FD814 /* Model */,
+				903DC18A25691907002FD814 /* View */,
+				903DC189256918FC002FD814 /* ViewModel */,
+				903DC185256918EC002FD814 /* Controller */,
+				903DC19225691944002FD814 /* NetworkManager */,
+				903DC18E25691937002FD814 /* Utility */,
 				9056294A2567E8680079FD37 /* Assets.xcassets */,
 				9056294C2567E8680079FD37 /* LaunchScreen.storyboard */,
 				9056294F2567E8680079FD37 /* Info.plist */,
@@ -128,6 +235,19 @@
 			path = DropBoxUserFactsUITests;
 			sourceTree = "<group>";
 		};
+		A9732EB673EF32C40F793269 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7EA914C91446F3DF51A77F1 /* Pods-DropBoxUserFacts.debug.xcconfig */,
+				F87E7FB9225D3A7DD015E953 /* Pods-DropBoxUserFacts.release.xcconfig */,
+				7491CB5066B22917A2F05344 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig */,
+				94AD1A28CC0BA1C918617EA5 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig */,
+				590A843918841C37ACBD6160 /* Pods-DropBoxUserFactsTests.debug.xcconfig */,
+				70459BA7783AF554EDC07D34 /* Pods-DropBoxUserFactsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 905629682567E8680079FD37 /* Build configuration list for PBXNativeTarget "DropBoxUserFacts" */;
 			buildPhases = (
+				7574F45A59664588E7ADABA9 /* [CP] Check Pods Manifest.lock */,
 				9056293A2567E8640079FD37 /* Sources */,
 				9056293B2567E8640079FD37 /* Frameworks */,
 				9056293C2567E8640079FD37 /* Resources */,
+				C8EEAC97D43AFA2BCA0D9C34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9056296B2567E8680079FD37 /* Build configuration list for PBXNativeTarget "DropBoxUserFactsTests" */;
 			buildPhases = (
+				A0F0672E6505C95A688098EB /* [CP] Check Pods Manifest.lock */,
 				905629502567E8680079FD37 /* Sources */,
 				905629512567E8680079FD37 /* Frameworks */,
 				905629522567E8680079FD37 /* Resources */,
@@ -170,9 +293,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9056296E2567E8680079FD37 /* Build configuration list for PBXNativeTarget "DropBoxUserFactsUITests" */;
 			buildPhases = (
+				A4ED98C899665394025466CA /* [CP] Check Pods Manifest.lock */,
 				9056295B2567E8680079FD37 /* Sources */,
 				9056295C2567E8680079FD37 /* Frameworks */,
 				9056295D2567E8680079FD37 /* Resources */,
+				A46E7275D687E0159D0EF37B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +358,6 @@
 			files = (
 				9056294E2567E8680079FD37 /* LaunchScreen.storyboard in Resources */,
 				9056294B2567E8680079FD37 /* Assets.xcassets in Resources */,
-				905629492567E8640079FD37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +377,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7574F45A59664588E7ADABA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DropBoxUserFacts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0F0672E6505C95A688098EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DropBoxUserFactsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A46E7275D687E0159D0EF37B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4ED98C899665394025466CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8EEAC97D43AFA2BCA0D9C34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9056293A2567E8640079FD37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				905629462567E8640079FD37 /* ViewController.swift in Sources */,
+				90D4E6E02568022B00DE9AF3 /* FactsListCollectionViewCell.swift in Sources */,
+				90D4E6EF2568058E00DE9AF3 /* APIRouter.swift in Sources */,
+				90D4E6EA256802D200DE9AF3 /* UIVIew+Utility.swift in Sources */,
+				90D4E70725681A5C00DE9AF3 /* RowsModel.swift in Sources */,
+				9056297D2567F2050079FD37 /* FactsListViewController.swift in Sources */,
+				90D4E70225681A1F00DE9AF3 /* DataModel.swift in Sources */,
+				90D4E6F4256805C700DE9AF3 /* APIClient.swift in Sources */,
 				905629422567E8640079FD37 /* AppDelegate.swift in Sources */,
+				905629822567F2390079FD37 /* FactsListViewModel.swift in Sources */,
+				905629872567F28C0079FD37 /* CustomFlowLayout.swift in Sources */,
 				905629442567E8640079FD37 /* SceneDelegate.swift in Sources */,
+				90D4E6E52568029F00DE9AF3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +532,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		905629472567E8640079FD37 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				905629482567E8640079FD37 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9056294C2567E8680079FD37 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +594,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -433,6 +661,7 @@
 		};
 		905629692567E8680079FD37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7EA914C91446F3DF51A77F1 /* Pods-DropBoxUserFacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +680,7 @@
 		};
 		9056296A2567E8680079FD37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87E7FB9225D3A7DD015E953 /* Pods-DropBoxUserFacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +699,7 @@
 		};
 		9056296C2567E8680079FD37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 590A843918841C37ACBD6160 /* Pods-DropBoxUserFactsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +721,7 @@
 		};
 		9056296D2567E8680079FD37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70459BA7783AF554EDC07D34 /* Pods-DropBoxUserFactsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +743,7 @@
 		};
 		9056296F2567E8680079FD37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7491CB5066B22917A2F05344 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +763,7 @@
 		};
 		905629702567E8680079FD37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94AD1A28CC0BA1C918617EA5 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

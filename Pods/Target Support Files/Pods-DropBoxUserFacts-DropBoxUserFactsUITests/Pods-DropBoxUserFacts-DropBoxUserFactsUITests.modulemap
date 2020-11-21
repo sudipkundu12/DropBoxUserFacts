@@ -1,0 +1,6 @@
+framework module Pods_DropBoxUserFacts_DropBoxUserFactsUITests {
+  umbrella header "Pods-DropBoxUserFacts-DropBoxUserFactsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

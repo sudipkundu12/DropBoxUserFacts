@@ -278,6 +278,7 @@
 				905629502567E8680079FD37 /* Sources */,
 				905629512567E8680079FD37 /* Frameworks */,
 				905629522567E8680079FD37 /* Resources */,
+				2AA021778445E1BCA065CE8F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,6 +379,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2AA021778445E1BCA065CE8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7574F45A59664588E7ADABA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

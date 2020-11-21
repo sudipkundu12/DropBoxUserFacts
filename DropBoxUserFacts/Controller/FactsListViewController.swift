@@ -10,7 +10,7 @@ import SVProgressHUD
 
 class FactsListViewController: UICollectionViewController {
     // MARK: Variable
-    var viewModel = FactsListViewModel(webservice: APIClient())
+    private var viewModel = FactsListViewModel(webservice: APIClient())
     var refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {

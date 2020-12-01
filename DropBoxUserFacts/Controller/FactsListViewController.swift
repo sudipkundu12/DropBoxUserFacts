@@ -99,7 +99,6 @@ extension FactsListViewController {
         case .unspecified: break
         case .tv: break
         case .carPlay: break
-        case .mac: break
         @unknown default: break
         }
         return CGFloat(count)

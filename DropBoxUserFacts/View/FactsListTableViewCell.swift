@@ -9,10 +9,6 @@ import UIKit
 
 class FactsListTableViewCell: UITableViewCell {
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        postImageView.image = nil
-    }
     // MARK: - Outlets
     var postImageView: UIImageView = {
         let postImageView = UIImageView()
@@ -29,18 +25,16 @@ class FactsListTableViewCell: UITableViewCell {
         let titleLbl = UILabel()
         titleLbl.font = UIFont(name: "Avenir-Medium", size: 17)
         titleLbl.numberOfLines = 0
-
         return titleLbl
     }()
-    lazy var stackView : UIStackView! = {
+    lazy var stackView: UIStackView! = {
             let stack = UIStackView()
         stack.axis = NSLayoutConstraint.Axis.vertical
-        stack.distribution = .fillProportionally
+        stack.distribution = .fill
         stack.alignment = .fill
-            stack.spacing = 2.0
-            stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.setContentCompressionResistancePriority(UILayoutPriority.required, for: .vertical)
-            return stack
+        stack.spacing = 2.0
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
         }()
     // MARK: - Variable
     var post: RowsModel? {
@@ -48,6 +42,10 @@ class FactsListTableViewCell: UITableViewCell {
             self.updateUI()
         }
         /* ... */
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        postImageView.image = nil
     }
     // MARK: - Frame
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -76,7 +74,6 @@ class FactsListTableViewCell: UITableViewCell {
                 fatalError("Failed to dequeue a imageHref.")
             }
             postImageView.af.setImage(withURL: imageUrl, placeholderImage: UIImage(named: "placeholder"), filter: nil)
-           
         }
     }
 

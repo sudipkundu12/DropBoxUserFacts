@@ -59,8 +59,6 @@ extension FactsListTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.rowsDataList.count
     }
-
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier.reuseIdentifire.rawValue, for: indexPath) as? FactsListTableViewCell else {
             fatalError("Failed to dequeue a FactsListTableViewCell.")
@@ -68,10 +66,8 @@ extension FactsListTableViewController {
         cell.post = viewModel.rowsDataList[indexPath.item]
         return cell
     }
-  
-
-
 }
+
 extension FactsListTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let post = viewModel.rowsDataList[indexPath.item]
@@ -79,7 +75,7 @@ extension FactsListTableViewController {
         let margin = CGFloat(16 * 2)
 
         let captionFont =  UIFont(name: "Avenir", size: 15) ?? UIFont.systemFont(ofSize: 15)
-        let titleFont = UIFont(name: "Avenir-Medium", size: 17) ?? UIFont.boldSystemFont(ofSize: 15)
+        let titleFont = UIFont(name: "Avenir-Medium", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
         let captionHeight = self.height(for: post.description, with: captionFont, width: tableView.frame.size.width - margin)
         let titleLblHeight = self.height(for: post.title, with: titleFont, width: tableView.frame.size.width - margin)
         let height =  captionHeight + titleLblHeight + CGFloat(post.imageHeight) + padding + 4

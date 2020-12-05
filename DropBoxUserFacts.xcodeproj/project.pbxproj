@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E81120F36B7CD2676A7B887 /* Pods_DropBoxUserFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C706DE73E8B260910CB5F4A2 /* Pods_DropBoxUserFacts.framework */; };
-		2153903534F877814D7DF27C /* Pods_DropBoxUserFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5639F662084C356DCB6C3B85 /* Pods_DropBoxUserFactsTests.framework */; };
 		905629422567E8640079FD37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629412567E8640079FD37 /* AppDelegate.swift */; };
 		905629442567E8640079FD37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629432567E8640079FD37 /* SceneDelegate.swift */; };
 		9056294B2567E8680079FD37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9056294A2567E8680079FD37 /* Assets.xcassets */; };
 		9056294E2567E8680079FD37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9056294C2567E8680079FD37 /* LaunchScreen.storyboard */; };
 		905629592567E8680079FD37 /* DropBoxUserFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629582567E8680079FD37 /* DropBoxUserFactsTests.swift */; };
-		905629642567E8680079FD37 /* DropBoxUserFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629632567E8680079FD37 /* DropBoxUserFactsUITests.swift */; };
 		905629822567F2390079FD37 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629812567F2390079FD37 /* FactsListViewModel.swift */; };
 		90A74A52257A99A30001581B /* FactsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A74A51257A99A30001581B /* FactsListTableViewController.swift */; };
 		90A74A57257A9A310001581B /* FactsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A74A56257A9A310001581B /* FactsListTableViewCell.swift */; };
@@ -24,7 +21,6 @@
 		90D4E6F4256805C700DE9AF3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E6F3256805C700DE9AF3 /* APIClient.swift */; };
 		90D4E70225681A1F00DE9AF3 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E70125681A1F00DE9AF3 /* DataModel.swift */; };
 		90D4E70725681A5C00DE9AF3 /* RowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E70625681A5C00DE9AF3 /* RowsModel.swift */; };
-		E8A8FDEE4C9625CC74DC0AAF /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6ADAABB18E56C003956BD2 /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5639F662084C356DCB6C3B85 /* Pods_DropBoxUserFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590A843918841C37ACBD6160 /* Pods-DropBoxUserFactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFactsTests.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70459BA7783AF554EDC07D34 /* Pods-DropBoxUserFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFactsTests.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7491CB5066B22917A2F05344 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,8 +54,6 @@
 		905629582567E8680079FD37 /* DropBoxUserFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxUserFactsTests.swift; sourceTree = "<group>"; };
 		9056295A2567E8680079FD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9056295F2567E8680079FD37 /* DropBoxUserFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBoxUserFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		905629632567E8680079FD37 /* DropBoxUserFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxUserFactsUITests.swift; sourceTree = "<group>"; };
-		905629652567E8680079FD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		905629812567F2390079FD37 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
 		90A74A51257A99A30001581B /* FactsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListTableViewController.swift; sourceTree = "<group>"; };
 		90A74A56257A9A310001581B /* FactsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,9 +64,7 @@
 		90D4E70125681A1F00DE9AF3 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		90D4E70625681A5C00DE9AF3 /* RowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsModel.swift; sourceTree = "<group>"; };
 		94AD1A28CC0BA1C918617EA5 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C706DE73E8B260910CB5F4A2 /* Pods_DropBoxUserFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EA914C91446F3DF51A77F1 /* Pods-DropBoxUserFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts.debug.xcconfig"; sourceTree = "<group>"; };
-		EC6ADAABB18E56C003956BD2 /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87E7FB9225D3A7DD015E953 /* Pods-DropBoxUserFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E81120F36B7CD2676A7B887 /* Pods_DropBoxUserFacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2153903534F877814D7DF27C /* Pods_DropBoxUserFactsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,23 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8A8FDEE4C9625CC74DC0AAF /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5EB2F410E3012188A6019BFC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C706DE73E8B260910CB5F4A2 /* Pods_DropBoxUserFacts.framework */,
-				EC6ADAABB18E56C003956BD2 /* Pods_DropBoxUserFacts_DropBoxUserFactsUITests.framework */,
-				5639F662084C356DCB6C3B85 /* Pods_DropBoxUserFactsTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		903DC17D256917CA002FD814 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,10 +158,8 @@
 			children = (
 				905629402567E8640079FD37 /* DropBoxUserFacts */,
 				905629572567E8680079FD37 /* DropBoxUserFactsTests */,
-				905629622567E8680079FD37 /* DropBoxUserFactsUITests */,
 				9056293F2567E8640079FD37 /* Products */,
 				A9732EB673EF32C40F793269 /* Pods */,
-				5EB2F410E3012188A6019BFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,15 +197,6 @@
 				9056295A2567E8680079FD37 /* Info.plist */,
 			);
 			path = DropBoxUserFactsTests;
-			sourceTree = "<group>";
-		};
-		905629622567E8680079FD37 /* DropBoxUserFactsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				905629632567E8680079FD37 /* DropBoxUserFactsUITests.swift */,
-				905629652567E8680079FD37 /* Info.plist */,
-			);
-			path = DropBoxUserFactsUITests;
 			sourceTree = "<group>";
 		};
 		A9732EB673EF32C40F793269 /* Pods */ = {
@@ -526,7 +493,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				905629642567E8680079FD37 /* DropBoxUserFactsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
-//            let layout = CustomFlowLayout()
             self.window = UIWindow(windowScene: windowScene)
             self.window?.makeKeyAndVisible()
             window?.rootViewController = UINavigationController(rootViewController: FactsListTableViewController())

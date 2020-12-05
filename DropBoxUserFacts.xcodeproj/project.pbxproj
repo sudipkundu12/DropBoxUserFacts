@@ -31,13 +31,6 @@
 			remoteGlobalIDString = 9056293D2567E8640079FD37;
 			remoteInfo = DropBoxUserFacts;
 		};
-		905629602567E8680079FD37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 905629362567E8640079FD37 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9056293D2567E8640079FD37;
-			remoteInfo = DropBoxUserFacts;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +46,6 @@
 		905629542567E8680079FD37 /* DropBoxUserFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBoxUserFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		905629582567E8680079FD37 /* DropBoxUserFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxUserFactsTests.swift; sourceTree = "<group>"; };
 		9056295A2567E8680079FD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9056295F2567E8680079FD37 /* DropBoxUserFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBoxUserFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		905629812567F2390079FD37 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
 		90A74A51257A99A30001581B /* FactsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListTableViewController.swift; sourceTree = "<group>"; };
 		90A74A56257A9A310001581B /* FactsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,13 +69,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		905629512567E8680079FD37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9056295C2567E8680079FD37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -168,7 +153,6 @@
 			children = (
 				9056293E2567E8640079FD37 /* DropBoxUserFacts.app */,
 				905629542567E8680079FD37 /* DropBoxUserFactsTests.xctest */,
-				9056295F2567E8680079FD37 /* DropBoxUserFactsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,26 +238,6 @@
 			productReference = 905629542567E8680079FD37 /* DropBoxUserFactsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9056295E2567E8680079FD37 /* DropBoxUserFactsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9056296E2567E8680079FD37 /* Build configuration list for PBXNativeTarget "DropBoxUserFactsUITests" */;
-			buildPhases = (
-				A4ED98C899665394025466CA /* [CP] Check Pods Manifest.lock */,
-				9056295B2567E8680079FD37 /* Sources */,
-				9056295C2567E8680079FD37 /* Frameworks */,
-				9056295D2567E8680079FD37 /* Resources */,
-				A46E7275D687E0159D0EF37B /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				905629612567E8680079FD37 /* PBXTargetDependency */,
-			);
-			name = DropBoxUserFactsUITests;
-			productName = DropBoxUserFactsUITests;
-			productReference = 9056295F2567E8680079FD37 /* DropBoxUserFactsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -287,10 +251,6 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					905629532567E8680079FD37 = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = 9056293D2567E8640079FD37;
-					};
-					9056295E2567E8680079FD37 = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = 9056293D2567E8640079FD37;
 					};
@@ -311,7 +271,6 @@
 			targets = (
 				9056293D2567E8640079FD37 /* DropBoxUserFacts */,
 				905629532567E8680079FD37 /* DropBoxUserFactsTests */,
-				9056295E2567E8680079FD37 /* DropBoxUserFactsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,13 +286,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		905629522567E8680079FD37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9056295D2567E8680079FD37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,45 +356,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A46E7275D687E0159D0EF37B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A4ED98C899665394025466CA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DropBoxUserFacts-DropBoxUserFactsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C8EEAC97D43AFA2BCA0D9C34 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,13 +402,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9056295B2567E8680079FD37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -503,11 +409,6 @@
 			isa = PBXTargetDependency;
 			target = 9056293D2567E8640079FD37 /* DropBoxUserFacts */;
 			targetProxy = 905629552567E8680079FD37 /* PBXContainerItemProxy */;
-		};
-		905629612567E8680079FD37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9056293D2567E8640079FD37 /* DropBoxUserFacts */;
-			targetProxy = 905629602567E8680079FD37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -721,46 +622,6 @@
 			};
 			name = Release;
 		};
-		9056296F2567E8680079FD37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7491CB5066B22917A2F05344 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DropBoxUserFactsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DropBoxUserFactsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DropBoxUserFacts;
-			};
-			name = Debug;
-		};
-		905629702567E8680079FD37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94AD1A28CC0BA1C918617EA5 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DropBoxUserFactsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DropBoxUserFactsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DropBoxUserFacts;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -787,15 +648,6 @@
 			buildConfigurations = (
 				9056296C2567E8680079FD37 /* Debug */,
 				9056296D2567E8680079FD37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9056296E2567E8680079FD37 /* Build configuration list for PBXNativeTarget "DropBoxUserFactsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9056296F2567E8680079FD37 /* Debug */,
-				905629702567E8680079FD37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

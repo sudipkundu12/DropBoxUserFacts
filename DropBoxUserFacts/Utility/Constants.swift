@@ -24,5 +24,5 @@ enum ContentType: String {
     case json = "application/json"
 }
 enum CellReuseIdentifier: String {
-    case reuseIdentifire = "ListCollectionViewCell"
+    case reuseIdentifire = "FactsListTableViewCell"
 }

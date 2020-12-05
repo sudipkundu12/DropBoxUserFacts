@@ -79,33 +79,3 @@ class FactsListViewModel: NSObject {
         /* ... */
     }
 }
-// MARK: CollectionView CustomLayout Delegate
-extension FactsListViewModel: CustomLayoutDelegate {
-    func collectionView(collectionView: UICollectionView, heightForPhotoAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
-        return CGFloat(rowsDataList[indexPath.row].imageHeight)
-    }
-    // MARK: Check for text height
-    func collectionView(collectionView: UICollectionView, heightForCaptionAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
-        let post = rowsDataList[indexPath.item]
-        let topPadding = CGFloat(8)
-        let captionFont = UIFont.systemFont(ofSize: 15)
-        let titleFont = UIFont.boldSystemFont(ofSize: 15)
-        let captionHeight = self.height(for: post.description, with: captionFont, width: width)
-        let titleLblHeight = self.height(for: post.title, with: titleFont, width: width)
-        let height = topPadding + captionHeight  + topPadding + titleLblHeight
-        return height
-    }
-
-    func height(for text: String, with font: UIFont, width: CGFloat) -> CGFloat {
-        if text.isEmpty == false {
-            let nsstring = NSString(string: text)
-            let maxHeight = CGFloat(10064.0)
-            let textAttributes = [NSAttributedString.Key.font: font]
-            let boundingRect = nsstring.boundingRect(with: CGSize(width: width, height: maxHeight), options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
-            return ceil(boundingRect.height)
-        } else {
-            return 0
-
-        }
-    }
-}

@@ -7,18 +7,16 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-import SwiftyJSON
 
 class APIClient {
     // MARK: Get API Call
-    func apiGet(serviceName: APIRouter, completionHandler: @escaping (JSON?, NSError?) -> Void) {
+    func apiGet(serviceName: APIRouter, completionHandler: @escaping (Data?, NSError?) -> Void) {
         AF.request(serviceName).responseString { (response) in
             switch(response.result) {
 
             case .success(let value):
                 if let dataFromString = value.data(using: .utf8, allowLossyConversion: false) {
-                    let jsonData = try? JSON(data: dataFromString)
-                    completionHandler(jsonData, nil)
+                    completionHandler(dataFromString, nil)
                 }
             case .failure(let error):
                 completionHandler(nil, error as NSError)

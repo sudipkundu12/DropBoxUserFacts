@@ -6,38 +6,28 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 struct RowsModel: Codable {
+    let title: String?
+    let description: String?
+    let imageHref: String?
+    var imageHeight = 100
+    enum CodingKeys: String, CodingKey {
 
-    private struct SerializationKeys {
-        static let title = "title"
-        static let description = "description"
-        static let imageHref = "imageHref"
-        static let imageHeight = "imageHeight"
-
+        case title = "title"
+        case description = "description"
+        case imageHref = "imageHref"
     }
 
-    // MARK: Properties
-    public var title: String = ""
-    public var description: String = ""
-    public var imageHref: String = ""
-    public var imageHeight: Int = 0
-
-    public init(object: Any) {
-        self.init(json: JSON(object))
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        title = try values.decodeIfPresent(String.self, forKey: .title)
+        description = try values.decodeIfPresent(String.self, forKey: .description)
+        imageHref = try values.decodeIfPresent(String.self, forKey: .imageHref)
     }
-
-    public init(json: JSON) {
-        title = json[SerializationKeys.title].stringValue
-        description = json[SerializationKeys.description].stringValue
-        imageHref = json[SerializationKeys.imageHref].stringValue
-        imageHeight = json[SerializationKeys.imageHeight].intValue
-
-    }
-    mutating func set_imageHeight(value: Int = 0) {
+    mutating func set_imageHeight(value: Int = 100) {
         self.imageHeight = value
 
     }
-
 }
+

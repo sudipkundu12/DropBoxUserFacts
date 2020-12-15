@@ -7,7 +7,6 @@
 
 import XCTest
 import Alamofire
-import SwiftyJSON
 
 @testable import DropBoxUserFacts
 
@@ -27,29 +26,32 @@ class DropBoxUserFactsTests: XCTestCase {
     // MARK: Check for Inserting model Data
     func testForModelDataUsingApi() {
         let expection = expectation(description: "Alamofire")
-        APIClient().apiGet(serviceName: APIRouter.facts) { (json: JSON?, error: NSError?) in
+        APIClient().apiGet(serviceName: APIRouter.facts) { (json: Data?, error: NSError?) in
             XCTAssertNil(error, "Whoops, error \(error!.localizedDescription)")
             guard let jsonResult = json else {
                 return
             }
-            let aboutData = DataModel.init(object: jsonResult)
+            let jsonDecoder = JSONDecoder()
+            let aboutData = try? jsonDecoder.decode(DataModel.self, from: jsonResult)
+            
+
             XCTAssertNotNil(aboutData)
-            XCTAssertEqual(aboutData.title, "About Canada")
-            for index in 0..<aboutData.rows.count {
-                if aboutData.rows[index].title.isEmpty {
-                    XCTAssertTrue(aboutData.rows[index].title.isEmpty, "Title Not Found")
+            XCTAssertEqual(aboutData?.title, "About Canada")
+            for index in 0..<(aboutData?.rows?.count)! {
+                if ((aboutData?.rows![index].title?.isEmpty) != nil) {
+                    XCTAssertTrue(((aboutData?.rows?[index].title?.isEmpty) != nil), "Title Not Found")
                 } else {
-                    XCTAssertFalse(aboutData.rows[index].title.isEmpty, "Title is present")
+                    XCTAssertFalse(((aboutData?.rows?[index].title?.isEmpty) != nil), "Title is present")
                 }
-                if aboutData.rows[index].description.isEmpty {
-                    XCTAssertTrue(aboutData.rows[index].description.isEmpty, "Description Not Found")
+                if ((aboutData?.rows?[index].description?.isEmpty) != nil) {
+                    XCTAssertTrue(((aboutData?.rows?[index].description?.isEmpty) != nil), "Description Not Found")
                 } else {
-                    XCTAssertFalse(aboutData.rows[index].description.isEmpty, "description Data is present")
+                    XCTAssertFalse(((aboutData?.rows?[index].description?.isEmpty) != nil), "description Data is present")
                 }
-                if aboutData.rows[index].imageHref.isEmpty {
-                    XCTAssertTrue(aboutData.rows[index].imageHref.isEmpty, "Image URL Not Found")
+                if ((aboutData?.rows?[index].imageHref?.isEmpty) != nil) {
+                    XCTAssertTrue(((aboutData?.rows?[index].imageHref?.isEmpty) != nil), "Image URL Not Found")
                 } else {
-                    XCTAssertFalse(aboutData.rows[index].imageHref.isEmpty, "Image URL is present")
+                    XCTAssertFalse(((aboutData?.rows?[index].imageHref?.isEmpty) != nil), "Image URL is present")
                 }
             }
             expection.fulfill()
@@ -83,16 +85,15 @@ class DropBoxUserFactsTests: XCTestCase {
     }
     // MARK: Test With Mock Data
     func test_ParsingValidJSON_ReturnsDataModel() {
-        let testSuccessfulJSON: JSON = [
-            "title":"About Canada", "rows":[["title":"Beavers", "description":"Beavers are second only to humans in their ability to manipulate and change their environment. They can measure up to 1.3 metres long. A group of beavers is called a colony", "imageHref":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg"], ["title":"Flag", "description":nil, "imageHref":"http://images.findicons.com/files/icons/662/world_flag/128/flag_of_canada.png"], ["title":nil, "description":nil, "imageHref":nil]]]
-        let aboutData = DataModel.init(object: testSuccessfulJSON)
+        
+        let aboutData = TestUtility.readJSONFromFile(fileName: "FactsMockData", type: DataModel.self)
         XCTAssertNotNil(aboutData)
-        XCTAssertEqual(aboutData.title, "About Canada")
-        XCTAssertEqual(aboutData.rows[0].title, "Beavers")
-        XCTAssertNotNil(aboutData.title)
-        XCTAssertTrue(aboutData.rows[2].title.isEmpty)
-        XCTAssertTrue(aboutData.rows[2].title.isEmpty)
-        XCTAssertTrue(aboutData.rows[2].imageHref.isEmpty)
+        XCTAssertEqual(aboutData?.title, "About Canada")
+        XCTAssertEqual(aboutData?.rows?[0].title, "Beavers")
+        XCTAssertNotNil(aboutData?.title)
+        XCTAssertTrue(((aboutData?.rows?[2].title?.isEmpty) != nil))
+        XCTAssertTrue(((aboutData?.rows?[2].title?.isEmpty) != nil))
+        XCTAssertTrue(((aboutData?.rows?[2].imageHref?.isEmpty) != nil))
 
     }
 

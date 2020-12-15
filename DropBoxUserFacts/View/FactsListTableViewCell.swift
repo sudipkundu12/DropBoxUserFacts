@@ -17,13 +17,13 @@ class FactsListTableViewCell: UITableViewCell {
     }()
     let descriptionLbl: UILabel = {
         let descriptionLbl = UILabel()
-        descriptionLbl.font = UIFont(name: "Avenir", size: 15)
+        descriptionLbl.font = UIFont.regular(ofSize: 15)
         descriptionLbl.numberOfLines = 0
         return descriptionLbl
     }()
     let titleLbl: UILabel = {
         let titleLbl = UILabel()
-        titleLbl.font = UIFont(name: "Avenir-Medium", size: 17)
+        titleLbl.font = UIFont.medium(ofSize: 17)
         titleLbl.numberOfLines = 0
         return titleLbl
     }()
@@ -43,10 +43,6 @@ class FactsListTableViewCell: UITableViewCell {
         }
         /* ... */
     }
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        postImageView.image = nil
-    }
     // MARK: - Frame
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -65,20 +61,20 @@ class FactsListTableViewCell: UITableViewCell {
     // MARK: - Update UI
     func updateUI() {
         guard let aboutData = post else {
-            fatalError("Failed to dequeue a RowsModel.")
+            fatalError(ErrorString.rowsModelError)
         }
         descriptionLbl.text = aboutData.description
         titleLbl.text = aboutData.title
-        if aboutData.imageHref.isEmpty == false {
-            guard let imageUrl = URL.init(string: aboutData.imageHref ) else {
-                fatalError("Failed to dequeue a imageHref.")
+        if aboutData.imageHref?.isEmpty == false {
+            guard let imageUrl = URL.init(string: aboutData.imageHref! ) else {
+                fatalError(ErrorString.imageUrlError)
             }
-            postImageView.af.setImage(withURL: imageUrl, placeholderImage: UIImage(named: "placeholder"), filter: nil)
+            postImageView.af.setImage(withURL: imageUrl, placeholderImage: #imageLiteral(resourceName: "placeholder"), filter: nil)
         }
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(ErrorString.initCoderError)
     }
 
 }

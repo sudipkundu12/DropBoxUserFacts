@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class FactsListViewModel: NSObject {
     // MARK: Variable
@@ -16,12 +15,10 @@ class FactsListViewModel: NSObject {
     // MARK: UI
     var showLoading: (() -> Void)?
     var isLoading: Bool = false {
-        didSet {
-            showLoading?()
-        }
+        didSet { showLoading?() }
     }
     ///Array of List Model class
-    var rowsDataList: [RowsModel] = [] {
+    var rowsDataList: [RowsModel?] = [] {
         ///Reload data when data set
         didSet {
             reloadList()
@@ -35,17 +32,19 @@ class FactsListViewModel: NSObject {
     // MARK: Call Api and store Data On model
     func getAboutListData() {
         self.isLoading = true
-        self.webservice.apiGet(serviceName: APIRouter.facts) { (json: JSON?, error: NSError?) in
+        self.webservice.apiGet(serviceName: APIRouter.facts) { (json: Data?, error: NSError?) in
             self.isLoading = false
             if error != nil {
                 return
             }
             guard let jsonResult = json else {
-                fatalError("Failed to dequeue a jsonResult.")
+                fatalError(ErrorString.jsonResultError)
             }
-            let userData = DataModel.init(object: jsonResult)
-            self.titleLbl = userData.title
-            self.rowsDataList = userData.rows.filter { !$0.title.isEmpty || !$0.description.isEmpty || !$0.imageHref.isEmpty}
+            let jsonDecoder = JSONDecoder()
+            let userData = try? jsonDecoder.decode(DataModel.self, from: jsonResult)
+
+            self.titleLbl = userData?.title
+            self.rowsDataList = userData?.rows?.filter { ($0.title != nil) || ($0.description != nil) || ($0.imageHref != nil)} ?? []
             self.setImageHeight()
 
           }
@@ -55,23 +54,20 @@ class FactsListViewModel: NSObject {
     func setImageHeight() {
         for index in 0..<self.rowsDataList.count {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-                if self.rowsDataList[index].imageHref.isEmpty {
-                    self.rowsDataList[index].set_imageHeight(value: 0)
+                if ((self.rowsDataList[index]?.imageHref) == nil) {
+                    self.rowsDataList[index]?.set_imageHeight(value: 0)
                     return
                 }
-                guard let imageUrl = URL(string: self.rowsDataList[index].imageHref) else {
-                    fatalError("Failed to dequeue a imageUrl.")
+                guard let imageUrl = URL(string: self.rowsDataList[index]?.imageHref ?? "") else {
+                    fatalError(ErrorString.imageUrlError)
                 }
                 //Calculate image size from url using Alamofire
                 self.webservice.getImageSizeFromURL(imageUrl: imageUrl, completionHandler: { (image, error) in
                     if error != nil {
-                        self.rowsDataList[index].set_imageHeight(value: 0)
+                        self.rowsDataList[index]?.set_imageHeight(value: 0)
                         return
                     }
-                    guard let imageSize = image else {
-                        fatalError("Failed to dequeue a imageSize.")
-                    }
-                      self.rowsDataList[index].set_imageHeight(value: Int(imageSize.size.height))
+                    self.rowsDataList[index]?.set_imageHeight(value: Int(image?.size.height ?? 100))
 
                 })
             }

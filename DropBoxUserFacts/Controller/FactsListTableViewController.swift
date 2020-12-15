@@ -22,7 +22,11 @@ class FactsListTableViewController: UITableViewController {
                 SVProgressHUD.dismiss()
             }
         }
-        viewModel.getAboutListData()
+        if Connectivity.isConnectedToInternet {
+            self.viewModel.getAboutListData()
+        } else {
+            AlertView.displayAlert(title: NetworkError.errorTitle.rawValue, message: NetworkError.errorMessage.rawValue)
+        }
         tableView.refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         setUpCollection()
@@ -30,7 +34,7 @@ class FactsListTableViewController: UITableViewController {
     }
     // MARK: CollectionView
     func setUpCollection() {
-        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 18)!]
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.heavy(ofSize: 18)]
         tableView.register(FactsListTableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier.reuseIdentifire.rawValue)
         tableView.backgroundColor = .white
         reloadAboutDataList()
@@ -61,7 +65,7 @@ extension FactsListTableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier.reuseIdentifire.rawValue, for: indexPath) as? FactsListTableViewCell else {
-            fatalError("Failed to dequeue a FactsListTableViewCell.")
+            fatalError(ErrorString.tableViewError)
         }
         cell.post = viewModel.rowsDataList[indexPath.item]
         return cell
@@ -71,21 +75,21 @@ extension FactsListTableViewController {
 extension FactsListTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let post = viewModel.rowsDataList[indexPath.item]
-        let padding = CGFloat(16)
-        let margin = CGFloat(16 * 2)
+        let padding = ViewPadding.topPadding + ViewPadding.bottomPadding
+        let margin = ViewPadding.leftPadding + ViewPadding.rightPadding
 
-        let captionFont =  UIFont(name: "Avenir", size: 15) ?? UIFont.systemFont(ofSize: 15)
-        let titleFont = UIFont(name: "Avenir-Medium", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)
-        let captionHeight = self.height(for: post.description, with: captionFont, width: tableView.frame.size.width - margin)
-        let titleLblHeight = self.height(for: post.title, with: titleFont, width: tableView.frame.size.width - margin)
-        let height =  captionHeight + titleLblHeight + CGFloat(post.imageHeight) + padding + 4
+        let captionFont =  UIFont.regular(ofSize: 15)
+        let titleFont = UIFont.medium(ofSize: 17)
+        let captionHeight = self.height(for: post?.description, with: captionFont, width: tableView.frame.size.width - CGFloat(margin))
+        let titleLblHeight = self.height(for: post?.title, with: titleFont, width: tableView.frame.size.width - CGFloat(margin))
+        let height =  captionHeight + titleLblHeight  + CGFloat(post?.imageHeight ?? 0) + CGFloat(padding) + 4
 
         return height
     }
-    func height(for text: String, with font: UIFont, width: CGFloat) -> CGFloat {
-        if text.isEmpty == false {
-            let nsstring = NSString(string: text)
-            let maxHeight = CGFloat(10064.0)
+    func height(for text: String?, with font: UIFont, width: CGFloat) -> CGFloat {
+        if text?.isEmpty == false {
+            let nsstring = NSString(string: text ?? "")
+            let maxHeight = CGFloat(MAXFLOAT)
             let textAttributes = [NSAttributedString.Key.font: font]
             let boundingRect = nsstring.boundingRect(with: CGSize(width: width, height: maxHeight), options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
             return ceil(boundingRect.height)
@@ -97,8 +101,14 @@ extension FactsListTableViewController {
 }
 extension FactsListTableViewController {
     @objc func refresh() {
-        viewModel.getAboutListData()
+        if Connectivity.isConnectedToInternet {
+            viewModel.getAboutListData()
+        } else {
+            AlertView.displayAlert(title: NetworkError.errorTitle.rawValue, message: NetworkError.errorMessage.rawValue)
+        }
+        reloadAboutDataList()
         refreshControl?.endRefreshing()
+        self.tableView.contentOffset = .zero
         /* ... */
     }
 }

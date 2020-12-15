@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		903D993B257D2CFA007AB7C4 /* jsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 903D993A257D2CFA007AB7C4 /* jsonData.json */; };
+		59627A20D3B725820245EB49 /* Pods_DropBoxUserFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB381F05FE361B316A5A95D8 /* Pods_DropBoxUserFactsTests.framework */; };
+		62AFF356B4DC3E5E13284BAA /* Pods_DropBoxUserFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B689166520ED75719D3E2BD /* Pods_DropBoxUserFacts.framework */; };
+		903D993B257D2CFA007AB7C4 /* FactsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 903D993A257D2CFA007AB7C4 /* FactsMockData.json */; };
 		905629422567E8640079FD37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629412567E8640079FD37 /* AppDelegate.swift */; };
 		905629442567E8640079FD37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629432567E8640079FD37 /* SceneDelegate.swift */; };
 		9056294B2567E8680079FD37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9056294A2567E8680079FD37 /* Assets.xcassets */; };
 		9056294E2567E8680079FD37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9056294C2567E8680079FD37 /* LaunchScreen.storyboard */; };
 		905629592567E8680079FD37 /* DropBoxUserFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629582567E8680079FD37 /* DropBoxUserFactsTests.swift */; };
 		905629822567F2390079FD37 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905629812567F2390079FD37 /* FactsListViewModel.swift */; };
+		9066FC032588725C00E2F1D4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066FC022588725C00E2F1D4 /* AlertView.swift */; };
+		9066FC0725887CD300E2F1D4 /* TestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066FC0625887CD300E2F1D4 /* TestUtility.swift */; };
 		90A74A52257A99A30001581B /* FactsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A74A51257A99A30001581B /* FactsListTableViewController.swift */; };
 		90A74A57257A9A310001581B /* FactsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A74A56257A9A310001581B /* FactsListTableViewCell.swift */; };
 		90D4E6E52568029F00DE9AF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E6E42568029F00DE9AF3 /* Constants.swift */; };
@@ -35,10 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B689166520ED75719D3E2BD /* Pods_DropBoxUserFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590A843918841C37ACBD6160 /* Pods-DropBoxUserFactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFactsTests.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70459BA7783AF554EDC07D34 /* Pods-DropBoxUserFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFactsTests.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFactsTests/Pods-DropBoxUserFactsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7491CB5066B22917A2F05344 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		903D993A257D2CFA007AB7C4 /* jsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jsonData.json; sourceTree = "<group>"; };
+		903D993A257D2CFA007AB7C4 /* FactsMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FactsMockData.json; sourceTree = "<group>"; };
 		9056293E2567E8640079FD37 /* DropBoxUserFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropBoxUserFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		905629412567E8640079FD37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		905629432567E8640079FD37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +54,8 @@
 		905629582567E8680079FD37 /* DropBoxUserFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxUserFactsTests.swift; sourceTree = "<group>"; };
 		9056295A2567E8680079FD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		905629812567F2390079FD37 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
+		9066FC022588725C00E2F1D4 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		9066FC0625887CD300E2F1D4 /* TestUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtility.swift; sourceTree = "<group>"; };
 		90A74A51257A99A30001581B /* FactsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListTableViewController.swift; sourceTree = "<group>"; };
 		90A74A56257A9A310001581B /* FactsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListTableViewCell.swift; sourceTree = "<group>"; };
 		90D4E6E42568029F00DE9AF3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 		90D4E70625681A5C00DE9AF3 /* RowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsModel.swift; sourceTree = "<group>"; };
 		94AD1A28CC0BA1C918617EA5 /* Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts-DropBoxUserFactsUITests/Pods-DropBoxUserFacts-DropBoxUserFactsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7EA914C91446F3DF51A77F1 /* Pods-DropBoxUserFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts.debug.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts.debug.xcconfig"; sourceTree = "<group>"; };
+		EB381F05FE361B316A5A95D8 /* Pods_DropBoxUserFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropBoxUserFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87E7FB9225D3A7DD015E953 /* Pods-DropBoxUserFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropBoxUserFacts.release.xcconfig"; path = "Target Support Files/Pods-DropBoxUserFacts/Pods-DropBoxUserFacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62AFF356B4DC3E5E13284BAA /* Pods_DropBoxUserFacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +83,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59627A20D3B725820245EB49 /* Pods_DropBoxUserFactsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37EEB7FDCC1F0C64BE722238 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B689166520ED75719D3E2BD /* Pods_DropBoxUserFacts.framework */,
+				EB381F05FE361B316A5A95D8 /* Pods_DropBoxUserFactsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		903DC17D256917CA002FD814 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +146,7 @@
 			children = (
 				90D4E6E42568029F00DE9AF3 /* Constants.swift */,
 				90D4E6E9256802D200DE9AF3 /* UIVIew+Utility.swift */,
+				9066FC022588725C00E2F1D4 /* AlertView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -147,6 +167,7 @@
 				905629572567E8680079FD37 /* DropBoxUserFactsTests */,
 				9056293F2567E8640079FD37 /* Products */,
 				A9732EB673EF32C40F793269 /* Pods */,
+				37EEB7FDCC1F0C64BE722238 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,7 +193,8 @@
 				9056294A2567E8680079FD37 /* Assets.xcassets */,
 				9056294C2567E8680079FD37 /* LaunchScreen.storyboard */,
 				9056294F2567E8680079FD37 /* Info.plist */,
-				903D993A257D2CFA007AB7C4 /* jsonData.json */,
+				903D993A257D2CFA007AB7C4 /* FactsMockData.json */,
+				9066FC0625887CD300E2F1D4 /* TestUtility.swift */,
 			);
 			path = DropBoxUserFacts;
 			sourceTree = "<group>";
@@ -285,7 +307,7 @@
 			files = (
 				9056294E2567E8680079FD37 /* LaunchScreen.storyboard in Resources */,
 				9056294B2567E8680079FD37 /* Assets.xcassets in Resources */,
-				903D993B257D2CFA007AB7C4 /* jsonData.json in Resources */,
+				903D993B257D2CFA007AB7C4 /* FactsMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +411,7 @@
 				90D4E6EA256802D200DE9AF3 /* UIVIew+Utility.swift in Sources */,
 				90D4E70725681A5C00DE9AF3 /* RowsModel.swift in Sources */,
 				90D4E70225681A1F00DE9AF3 /* DataModel.swift in Sources */,
+				9066FC032588725C00E2F1D4 /* AlertView.swift in Sources */,
 				90D4E6F4256805C700DE9AF3 /* APIClient.swift in Sources */,
 				905629422567E8640079FD37 /* AppDelegate.swift in Sources */,
 				905629822567F2390079FD37 /* FactsListViewModel.swift in Sources */,
@@ -402,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9066FC0725887CD300E2F1D4 /* TestUtility.swift in Sources */,
 				905629592567E8680079FD37 /* DropBoxUserFactsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,7 +614,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DropBoxUserFactsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,7 +636,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DropBoxUserFactsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

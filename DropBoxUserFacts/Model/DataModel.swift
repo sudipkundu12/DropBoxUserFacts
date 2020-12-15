@@ -6,24 +6,21 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 struct DataModel: Codable {
 
-    private struct SerializationKeys {
-        static let title = "title"
-        static let rows = "rows"
-    }
-    // MARK: Properties
-    public var title: String?
-    public var rows: [RowsModel] = []
+    let title: String?
+    let rows: [RowsModel]?
 
-    public init(object: Any) {
-        self.init(json: JSON(object))
-    }
-    public init(json: JSON) {
-        title = json[SerializationKeys.title].string
-        if let items = json[SerializationKeys.rows].array { rows = items.map { RowsModel(json: $0) } }
+    enum CodingKeys: String, CodingKey {
+
+        case title = "title"
+        case rows = "rows"
     }
 
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        title = try values.decodeIfPresent(String.self, forKey: .title)
+        rows = try values.decodeIfPresent([RowsModel].self, forKey: .rows)
+    }
 }

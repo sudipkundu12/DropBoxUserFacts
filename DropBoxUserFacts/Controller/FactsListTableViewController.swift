@@ -80,6 +80,7 @@ extension FactsListTableViewController {
         } else {
             self.viewModel.rowsDataList = []
             self.viewModel.titleLbl = nil
+            self.title = nil
             AlertView.displayAlert(title: NetworkError.errorTitle.rawValue, message: NetworkError.errorMessage.rawValue)
         }
         tableView.refreshControl?.endRefreshing()

@@ -39,12 +39,6 @@ struct ErrorString {
     static let rowsModelError = "Failed to dequeue a RowsModel."
     static let initCoderError = "init(coder:) has not been implemented"
 }
-struct ViewPadding {
-    static let topPadding = 8
-    static let leftPadding = 16
-    static let rightPadding = 16
-    static let bottomPadding = 8
-}
 extension UIFont {
     class func heavy(ofSize size: CGFloat) -> UIFont {
        return UIFont(name: "Avenir-Heavy", size: size) ?? UIFont.boldSystemFont(ofSize: size)

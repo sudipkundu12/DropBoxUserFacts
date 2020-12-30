@@ -45,33 +45,7 @@ class FactsListViewModel: NSObject {
 
             self.titleLbl = userData?.title
             self.rowsDataList = userData?.rows?.filter { ($0.title != nil) || ($0.description != nil) || ($0.imageHref != nil)} ?? []
-            self.setImageHeight()
-
           }
         /* ... */
        }
-    // MARK: Check For image Size
-    func setImageHeight() {
-        for index in 0..<self.rowsDataList.count {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-                if ((self.rowsDataList[index]?.imageHref) == nil) {
-                    self.rowsDataList[index]?.set_imageHeight(value: 0)
-                    return
-                }
-                guard let imageUrl = URL(string: self.rowsDataList[index]?.imageHref ?? "") else {
-                    fatalError(ErrorString.imageUrlError)
-                }
-                //Calculate image size from url using Alamofire
-                self.webservice.getImageSizeFromURL(imageUrl: imageUrl, completionHandler: { (image, error) in
-                    if error != nil {
-                        self.rowsDataList[index]?.set_imageHeight(value: 0)
-                        return
-                    }
-                    self.rowsDataList[index]?.set_imageHeight(value: Int(image?.size.height ?? 100))
-
-                })
-            }
-        }
-        /* ... */
-    }
 }

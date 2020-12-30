@@ -76,8 +76,8 @@ class FactsListTableViewCell: UITableViewCell {
         
         view.translatesAutoresizingMaskIntoConstraints = false
         view.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10).isActive = true
-        view.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 10).isActive = true
-        view.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -10).isActive = true
+        view.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 16).isActive = true
+        view.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -16).isActive = true
         view.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10).isActive = true
     }
     private func addConstraintToTitleLabel() {

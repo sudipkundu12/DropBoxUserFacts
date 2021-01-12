@@ -27,6 +27,9 @@ enum ContentType: String {
 enum CellReuseIdentifier: String {
     case reuseIdentifire = "FactsListTableViewCell"
 }
+enum CellHeight: CGFloat {
+    case height = 200.0
+}
 enum NetworkError: String {
     case errorTitle = "Network Error"
     case errorMessage = "Please check your network connection"

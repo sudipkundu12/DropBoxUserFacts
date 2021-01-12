@@ -37,7 +37,7 @@ class FactsListTableViewController: UITableViewController {
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.heavy()]
         tableView.register(FactsListTableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier.reuseIdentifire.rawValue)
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = CellHeight.height.rawValue
         reloadAboutDataList()
         /* ... */
     }

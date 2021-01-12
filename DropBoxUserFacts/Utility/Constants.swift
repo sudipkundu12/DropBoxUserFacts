@@ -39,15 +39,36 @@ struct ErrorString {
     static let rowsModelError = "Failed to dequeue a RowsModel."
     static let initCoderError = "init(coder:) has not been implemented"
 }
+
+struct Padding {
+    static let leftPadding = 10
+    static let rightPadding = -10
+    static let topPadding = 10
+    static let bottomPadding = 10
+    static let defaultPadding = 0
+}
+struct ContentViewPadding {
+    static let leftPadding = 16
+    static let rightPadding = -16
+    static let topPadding = 10
+    static let bottomPadding = -10
+}
+struct imageViewSize {
+    static let height = 50
+    static let width = 60
+}
+struct viewConstants {
+    static let cornerRadious = 8
+}
 extension UIFont {
-    class func heavy(ofSize size: CGFloat) -> UIFont {
-       return UIFont(name: "Avenir-Heavy", size: size) ?? UIFont.boldSystemFont(ofSize: size)
+    class func heavy() -> UIFont {
+       return UIFont(name: "Avenir-Heavy", size: 18) ?? UIFont.boldSystemFont(ofSize: 18)
     }
-    class func medium(ofSize size: CGFloat) -> UIFont {
-       return UIFont(name: "Avenir-Medium", size: size) ?? UIFont.systemFont(ofSize: size)
+    class func medium() -> UIFont {
+       return UIFont(name: "Avenir-Medium", size: 17) ?? UIFont.systemFont(ofSize: 17)
     }
-    class func regular(ofSize size: CGFloat) -> UIFont {
-      return UIFont(name: "Avenir", size: size) ?? UIFont.systemFont(ofSize: size)
+    class func regular() -> UIFont {
+      return UIFont(name: "Avenir", size: 15) ?? UIFont.systemFont(ofSize: 15)
     }
     
 }

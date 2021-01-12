@@ -13,26 +13,26 @@ class FactsListTableViewCell: UITableViewCell {
     var postImageView: UIImageView = {
         let postImageView = UIImageView()
         postImageView.contentMode = .scaleAspectFill
-        postImageView.layer.cornerRadius = 8.0
+        postImageView.layer.cornerRadius = CGFloat(viewConstants.cornerRadious)
         postImageView.clipsToBounds = true
         return postImageView
     }()
     let descriptionLbl: UILabel = {
         let descriptionLbl = UILabel()
-        descriptionLbl.font = UIFont.regular(ofSize: 15)
+        descriptionLbl.font = UIFont.regular()
         descriptionLbl.numberOfLines = 0
         return descriptionLbl
     }()
     let titleLbl: UILabel = {
         let titleLbl = UILabel()
-        titleLbl.font = UIFont.heavy(ofSize: 17)
+        titleLbl.font = UIFont.heavy()
         titleLbl.numberOfLines = 0
         return titleLbl
     }()
     let factsView: UIView = {
         let factsView = UIView()
         factsView.backgroundColor = .white
-        factsView.layer.cornerRadius = 8.0
+        factsView.layer.cornerRadius = CGFloat(viewConstants.cornerRadious)
         factsView.clipsToBounds = true
         return factsView
     }()
@@ -75,47 +75,47 @@ class FactsListTableViewCell: UITableViewCell {
     func addView(view: UIView) {
         
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10).isActive = true
-        view.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 16).isActive = true
-        view.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -16).isActive = true
-        view.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10).isActive = true
+        view.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: CGFloat(ContentViewPadding.topPadding)).isActive = true
+        view.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: CGFloat(ContentViewPadding.leftPadding)).isActive = true
+        view.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: CGFloat(ContentViewPadding.rightPadding)).isActive = true
+        view.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: CGFloat(ContentViewPadding.bottomPadding)).isActive = true
     }
     private func addConstraintToTitleLabel() {
         titleLbl.translatesAutoresizingMaskIntoConstraints = false
-        let leadingConstraint = NSLayoutConstraint(item: titleLbl, attribute: .leading, relatedBy: .equal, toItem: postImageView, attribute: .trailing, multiplier: 1.0, constant: 10)
+        let leadingConstraint = NSLayoutConstraint(item: titleLbl, attribute: .leading, relatedBy: .equal, toItem: postImageView, attribute: .trailing, multiplier: 1.0, constant:CGFloat(Padding.leftPadding) )
         
-        let trailingConstraint = NSLayoutConstraint(item: titleLbl, attribute: .trailing, relatedBy: .equal, toItem: titleLbl.superview!, attribute: .trailing, multiplier: 1.0, constant: -10)
+        let trailingConstraint = NSLayoutConstraint(item: titleLbl, attribute: .trailing, relatedBy: .equal, toItem: titleLbl.superview!, attribute: .trailing, multiplier: 1.0, constant: CGFloat(Padding.rightPadding))
         
-        let topConstraint = NSLayoutConstraint(item: titleLbl, attribute: .top, relatedBy: .equal, toItem: postImageView, attribute: .top, multiplier: 1.0, constant: 0)
+        let topConstraint = NSLayoutConstraint(item: titleLbl, attribute: .top, relatedBy: .equal, toItem: postImageView, attribute: .top, multiplier: 1.0, constant: CGFloat(Padding.defaultPadding))
         factsView.addConstraints([leadingConstraint, trailingConstraint, topConstraint])
     }
     
     private func addConstraintToDescriptionLabel() {
         descriptionLbl.translatesAutoresizingMaskIntoConstraints = false
-        let leadingConstraint = NSLayoutConstraint(item: descriptionLbl, attribute: .leading, relatedBy: .equal, toItem: titleLbl, attribute: .leading, multiplier: 1.0, constant: 0)
+        let leadingConstraint = NSLayoutConstraint(item: descriptionLbl, attribute: .leading, relatedBy: .equal, toItem: titleLbl, attribute: .leading, multiplier: 1.0, constant: CGFloat(Padding.defaultPadding))
         
-        let trailingConstraint = NSLayoutConstraint(item: descriptionLbl, attribute: .trailing, relatedBy: .equal, toItem: titleLbl, attribute: .trailing, multiplier: 1.0, constant: 0)
+        let trailingConstraint = NSLayoutConstraint(item: descriptionLbl, attribute: .trailing, relatedBy: .equal, toItem: titleLbl, attribute: .trailing, multiplier: 1.0, constant: CGFloat(Padding.defaultPadding))
         
-        let topConstraint = NSLayoutConstraint(item: descriptionLbl, attribute: .top, relatedBy: .equal, toItem: titleLbl, attribute: .bottom, multiplier: 1.0, constant: 8)
+        let topConstraint = NSLayoutConstraint(item: descriptionLbl, attribute: .top, relatedBy: .equal, toItem: titleLbl, attribute: .bottom, multiplier: 1.0, constant: CGFloat(Padding.topPadding))
         
         
-        let bottomConstraint = NSLayoutConstraint(item: descriptionLbl.superview!, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: descriptionLbl, attribute: .bottom, multiplier: 1.0, constant: 10)
+        let bottomConstraint = NSLayoutConstraint(item: descriptionLbl.superview!, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: descriptionLbl, attribute: .bottom, multiplier: 1.0, constant: CGFloat(Padding.bottomPadding))
         
         factsView.addConstraints([leadingConstraint, trailingConstraint, topConstraint, bottomConstraint])
     }
     
     private func addConstraintToPostImage() {
         postImageView.translatesAutoresizingMaskIntoConstraints = false
-        let leadingConstraint = NSLayoutConstraint(item: postImageView, attribute: .leading, relatedBy: .equal, toItem: factsView, attribute: .leading, multiplier: 1.0, constant: 10)
+        let leadingConstraint = NSLayoutConstraint(item: postImageView, attribute: .leading, relatedBy: .equal, toItem: factsView, attribute: .leading, multiplier: 1.0, constant: CGFloat(Padding.leftPadding))
         
-        let topConstraint = NSLayoutConstraint(item: postImageView, attribute: .top, relatedBy: .equal, toItem: factsView, attribute: .top, multiplier: 1.0, constant: 10)
+        let topConstraint = NSLayoutConstraint(item: postImageView, attribute: .top, relatedBy: .equal, toItem: factsView, attribute: .top, multiplier: 1.0, constant: CGFloat(Padding.topPadding))
         
         
-        let heightConstraint = NSLayoutConstraint(item: postImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50)
+        let heightConstraint = NSLayoutConstraint(item: postImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: CGFloat(imageViewSize.height))
         
-        let widthConstraint = NSLayoutConstraint(item: postImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 60)
+        let widthConstraint = NSLayoutConstraint(item: postImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: CGFloat(imageViewSize.width))
         
-        let bottomConstraint = NSLayoutConstraint(item: postImageView.superview!, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: postImageView, attribute: .bottom, multiplier: 1.0, constant: 10)
+        let bottomConstraint = NSLayoutConstraint(item: postImageView.superview!, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: postImageView, attribute: .bottom, multiplier: 1.0, constant: CGFloat(Padding.bottomPadding))
 
         factsView.addConstraints([leadingConstraint, topConstraint, widthConstraint, heightConstraint, bottomConstraint])
     }

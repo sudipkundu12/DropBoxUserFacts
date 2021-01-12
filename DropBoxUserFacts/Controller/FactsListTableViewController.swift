@@ -34,7 +34,7 @@ class FactsListTableViewController: UITableViewController {
     }
     // MARK: TableView
     func setUpTableView() {
-        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.heavy(ofSize: 18)]
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.heavy()]
         tableView.register(FactsListTableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier.reuseIdentifire.rawValue)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
